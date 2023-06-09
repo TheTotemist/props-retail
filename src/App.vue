@@ -128,50 +128,30 @@ function handleVideoEnded() {
   transform: translateX(-50%) translateY(-50%);
   z-index: 30;
   background-color: white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
 }
 
 .btn-restart {
-  display: block;
-  width: 90px;
-  height: 25px;
-  margin: 36px 22px 28px;
-  border: 0.5px solid #000;
-  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
   background-color: white;
   font-family: 'PingFang SC';
   font-style: normal;
   font-weight: 300;
-  font-size: 10px;
-  line-height: 14px;
   text-align: center;
-  letter-spacing: 0.1em;
-  color: #333333;
-}
-
-.btn-restart > span {
-  margin-left: 6px;
 }
 
 .offical-account {
-  margin-bottom: 40px;
   text-align: center;
 }
 
 .offical-account > p {
   font-family: 'PingFang SC';
   font-style: normal;
-  font-weight: 300;
-  font-size: 6px;
-  line-height: 8px;
   text-align: center;
-  letter-spacing: 0.1em;
-}
-
-.qrcode {
-  width: 38px;
-  height: 35px;
+  font-weight: 300;
+  color: #000;
 }
 
 .icon-headphones,
@@ -190,32 +170,128 @@ function handleVideoEnded() {
   text-align: center;
 }
 
-.icon-play > p,
-.icon-rotate > .cn,
-.icon-headphones > .cn {
-  font-family: 'PingFang SC';
-  font-size: 18px;
-  letter-spacing: 0.1em;
-}
-
-.icon-rotate > .en,
-.icon-headphones > .en {
-  font-size: 12px;
-  font-weight: 600;
-}
-
 .icon-headphones > img {
   display: block;
 }
 
-.icon-headphones > img:first-of-type {
-  width: 115px;
-  margin: 0 auto;
+@media only screen and (orientation: landscape) {
+  #modal {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .btn-restart {
+    width: 90px;
+    height: 25px;
+    margin: 36px 22px 28px;
+    border: 0.5px solid #000;
+    border-radius: 50px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .btn-restart > span {
+    margin-left: 6px;
+  }
+
+  .offical-account {
+    margin-bottom: 40px;
+  }
+
+  .offical-account > p {
+    font-size: 6px;
+    line-height: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .qrcode {
+    width: 38px;
+    height: 35px;
+  }
+
+  .icon-play > p,
+  .icon-rotate > .cn,
+  .icon-headphones > .cn {
+    font-family: 'PingFang SC';
+    font-size: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  .icon-rotate > .en,
+  .icon-headphones > .en {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .icon-headphones > img:first-of-type {
+    width: 115px;
+    margin: 0 auto;
+  }
+
+  .icon-headphones > img:nth-of-type(2) {
+    width: 115px;
+    margin: 10px auto;
+  }
 }
 
-.icon-headphones > img:nth-of-type(2) {
-  width: 115px;
-  margin: 10px auto;
+@media only screen and (orientation: portrait) {
+  #modal {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+
+  .btn-restart {
+    width: 180px;
+    height: 50px;
+    margin: 72px 44px 56px;
+    border: 1px solid #000;
+    border-radius: 100px;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+  }
+
+  .btn-restart > span {
+    margin-left: 12px;
+  }
+
+  .offical-account {
+    margin-bottom: 80px;
+  }
+
+  .offical-account > p {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2em;
+  }
+
+  .qrcode {
+    width: 76px;
+    height: 70px;
+  }
+
+  .icon-play > p,
+  .icon-rotate > .cn,
+  .icon-headphones > .cn {
+    font-family: 'PingFang SC';
+    font-size: 32px;
+    letter-spacing: 0.2em;
+  }
+
+  .icon-rotate > .en,
+  .icon-headphones > .en {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .icon-headphones > img:first-of-type {
+    width: 230px;
+    margin: 0 auto;
+  }
+
+  .icon-headphones > img:nth-of-type(2) {
+    width: 230px;
+    margin: 10px auto;
+  }
 }
 
 .rotate-fade-enter-active,
