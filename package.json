@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vue/compiler-sfc": "^3.5.10",
     "vite-svg-loader": "^4.0.0",
     "vue": "^3.3.2"
   },
