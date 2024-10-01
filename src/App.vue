@@ -56,7 +56,7 @@ import TheVideo from '@/components/TheVideo.vue'
 </script>
 
 <template>
-  <TheNavigation></TheNavigation>
+  <!-- <TheNavigation></TheNavigation> -->
   <TheVideo></TheVideo>
   <!--
   <main>

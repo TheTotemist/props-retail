@@ -21,7 +21,7 @@ import sourceData from '@/data.json'
 export default {
   data() {
     return {
-      woodtotems: sourceData.woodtotems
+      woodtotems: sourceData.woodtotem
     }
   }
 }
