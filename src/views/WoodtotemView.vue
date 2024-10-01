@@ -20,7 +20,7 @@ export default {
       return parseInt(this.$route.params.id)
     },
     woodtotem() {
-      return sourceData.woodtotems.find(woodtotem => woodtotem.id === this.woodtotemId)
+      return sourceData.woodtotem.find(woodtotem => woodtotem.id === this.woodtotemId)
     }
   }
 }
