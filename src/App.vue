@@ -54,6 +54,9 @@ function handleVideoEnded() {
 </script>
 
 <template>
+  <router-link to="/">Home</router-link>
+  <router-link to="/woodtotems/:id">Woodtotems</router-link>
+  <router-view></router-view>
   <main>
     <Transition name="rotate-fade">
       <div class="icon-rotate" v-if="showRotate">
