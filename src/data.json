@@ -1,0 +1,28 @@
+{
+  "woodtotems": [
+    {
+      "id": 1,
+      "retailer": "Galerie Lafayette",
+      "city": "Shenzhen",
+      "dateAssigned": "2024-09-30",
+      "assetType": "video",
+      "nfcUrl": "https://staging.yizhiji.com.cn/api/nfc/woodtotem1"
+    },
+    {
+      "id": 2,
+      "retailer": "Galerie Lafayette",
+      "city": "Shanghai",
+      "dateAssigned": "2024-09-30",
+      "assetType": "video",
+      "nfcUrl": "https://staging.yizhiji.com.cn/api/nfc/woodtotem1"
+    },
+    {
+      "id": 3,
+      "retailer": "Galerie Lafayette",
+      "city": "Beijing",
+      "dateAssigned": "2024-09-30",
+      "assetType": "video",
+      "nfcUrl": "https://staging.yizhiji.com.cn/api/nfc/woodtotem1"
+    }
+  ]
+}

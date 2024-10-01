@@ -7,19 +7,6 @@ import svgLoader from 'vite-svg-loader'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: './index.html',
-        woodtotem: './woodtotem/{id}/index.html'
-      },
-      output: {
-        manualChunks: {
-          woodtotem: ['woodtotem/{id}']
-        }
-      }
-    }
-  },
   plugins: [vue(), svgLoader()],
   resolve: {
     alias: {
