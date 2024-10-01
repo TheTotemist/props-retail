@@ -1,0 +1,22 @@
+{
+  "woodtotems": [
+    {
+      "id": 1,
+      "retailer": "GL",
+      "city": "Shenzhen",
+      "dateAssigned": "20240930",
+    },
+    {
+      "id": 2,
+      "retailer": "GL",
+      "city": "Shenzhen",
+      "dateAssigned": "20240930",
+    },
+    {
+      "id": 3,
+      "retailer": "GL",
+      "city": "Shenzhen",
+      "dateAssigned": "20240930",
+    },
+  ]
+}
