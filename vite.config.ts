@@ -7,10 +7,22 @@ import svgLoader from 'vite-svg-loader'
 
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  ssr: {
+    noExternal: mode === 'development' ? ['vue-router'] : [],
+  },
   plugins: [
     VueRouter({
-      // Routing options 
+      routesFolder: [
+        {
+          src: 'src/pages',
+          path: '',
+          exclude: (excluded) => excluded,
+          filePatterns: (filePatterns) => filePatterns,
+          extensions: (extensions) => extensions,
+        }
+      ],
+      extensions: ['.vue'],
     }),
     Vue(), 
     svgLoader()
@@ -20,4 +32,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
-})
+}))
