@@ -1,11 +1,6 @@
-<template>
-  <h1>Home</h1>
-</template>
-
-<script setup>
-import { useRouter } from 'vue-router'
+<script setup lang="ts">
+import { useRouter } from 'vue-router/auto'
 
 const router = useRouter()
-
-router.push('/woodtotem/1')
 </script>
+
