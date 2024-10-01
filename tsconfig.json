@@ -1,4 +1,5 @@
 {
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./types.d.ts", "src/main.ts", "src/pages/**/*.vue"],
   "files": [],
   "references": [
     {
@@ -11,5 +12,6 @@
   "compilerOptions": {
     "moduleResolution": "NodeNext",
     "module": "NodeNext"
-  }
+  },
+  "allowJs": true
 }
