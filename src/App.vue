@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import TheNavigation from '@/components/TheNavigation.vue';
+import TheNavigation from '@/components/TheNavigation.vue';
 import TheVideo from '@/components/TheVideo.vue'
 // import { ref, watchEffect } from 'vue'
 // import IconRotate from '@/assets/rotate.svg'
@@ -56,8 +56,8 @@ import TheVideo from '@/components/TheVideo.vue'
 </script>
 
 <template>
-  <TheNavigation></TheNavigation>
-  <!-- <TheVideo></TheVideo> -->
+  <!-- <TheNavigation></TheNavigation> -->
+  <TheVideo></TheVideo>
   <!--
   <main>
      <Transition name="rotate-fade">
