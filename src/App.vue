@@ -57,7 +57,7 @@ import TheVideo from '@/components/TheVideo.vue'
 
 <template>
   <TheNavigation></TheNavigation>
-  <TheVideo></TheVideo>
+  <!-- <TheVideo></TheVideo> -->
   <!--
   <main>
      <Transition name="rotate-fade">
