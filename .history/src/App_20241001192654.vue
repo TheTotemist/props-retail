@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { ref, watchEffect } from 'vue'
+import { ref, watchEffect } from 'vue'
 // import IconRotate from '@/assets/rotate.svg'
 // import IconPlay from '@/assets/play.svg'
 // import IconRestart from '@/assets/restart.svg'
@@ -117,7 +117,7 @@
   </main>
 </template>
 
-<!-- <style scoped>
+<style scoped>
 #video {
   position: fixed;
   top: 50%;
@@ -329,4 +329,4 @@
 .modal-fade-leave-to {
   opacity: 0;
 }
-</style> -->
+</style>

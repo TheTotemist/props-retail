@@ -1,71 +1,71 @@
 <script setup lang="ts">
-// import { ref, watchEffect } from 'vue'
-// import IconRotate from '@/assets/rotate.svg'
-// import IconPlay from '@/assets/play.svg'
-// import IconRestart from '@/assets/restart.svg'
+import { ref, watchEffect } from 'vue'
+import IconRotate from '@/assets/rotate.svg'
+import IconPlay from '@/assets/play.svg'
+import IconRestart from '@/assets/restart.svg'
 
-// const API_URL = 'https://staging.yizhiji.com.cn/api/nfc/woodtotem1'
 
-// const videoSrc = ref<string>('')
-// const videoRef = ref<HTMLVideoElement | null>(null)
+const API_URL = 'https://staging.yizhiji.com.cn/api/nfc/woodtotem1'
 
-// const showPlay = ref<boolean>(false)
-// const showModal = ref<boolean>(false)
-// const showRotate = ref<boolean>(true)
-// const showHeadphones = ref<boolean>(false)
+const videoSrc = ref<string>('')
+const videoRef = ref<HTMLVideoElement | null>(null)
 
-// watchEffect(async () => {
-//   try {
-//     const data = await (await fetch(API_URL)).json()
-//     videoSrc.value = `https://cdn-staging.yizhiji.com.cn${data.page_media_files[0].media_name}`
-//   } catch (error) {
-//     console.error(error)
-//   }
-// })
+const showPlay = ref<boolean>(false)
+const showModal = ref<boolean>(false)
+const showRotate = ref<boolean>(true)
+const showHeadphones = ref<boolean>(false)
 
-// function playVideo() {
-//   const video = videoRef.value as HTMLVideoElement
-//   video.play()
-//   video.style.zIndex = '20'
-//   video.controls = true
-// }
+watchEffect(async () => {
+  try {
+    const data = await (await fetch(API_URL)).json()
+    videoSrc.value = `https://cdn-staging.yizhiji.com.cn${data.page_media_files[0].media_name}`
+  } catch (error) {
+    console.error(error)
+  }
+})
 
-// function handleMetadata() {
-//   console.log('Video can play through without buffering.')
-//   showRotate.value = false
-//   showHeadphones.value = true
+function playVideo() {
+  const video = videoRef.value as HTMLVideoElement
+  video.play()
+  video.style.zIndex = '20'
+  video.controls = true
+}
 
-//   setTimeout(() => {
-//     showHeadphones.value = false
-//     showPlay.value = true
-//   }, 2000)
-// }
+function handleMetadata() {
+  console.log('Video can play through without buffering.')
+  showRotate.value = false
+  showHeadphones.value = true
 
-// function handleVideoEnded() {
-//   const video: any = videoRef.value
+  setTimeout(() => {
+    showHeadphones.value = false
+    showPlay.value = true
+  }, 2000)
+}
 
-//   if (video.exitFullscreen) video.exitFullscreen()
-//   else if (video.webkitExitFullscreen) video.webkitExitFullscreen()
-//   else if (video.mozCancelFullScreen) video.mozCancelFullScreen()
-//   else if (video.msExitFullscreen) video.msExitFullscreen()
+function handleVideoEnded() {
+  const video: any = videoRef.value
 
-//   showModal.value = true
-// }
+  if (video.exitFullscreen) video.exitFullscreen()
+  else if (video.webkitExitFullscreen) video.webkitExitFullscreen()
+  else if (video.mozCancelFullScreen) video.mozCancelFullScreen()
+  else if (video.msExitFullscreen) video.msExitFullscreen()
+
+  showModal.value = true
+}
+
+export default {
+  computed: {
+    woodtotemId(){
+      return parseInt(this.$route.params.id)
+    }
+  }
+}
 </script>
 
 <template>
-  <div id="nav">
-    <nav>
-      <router-link to="/"></router-link>
-      <router-link to="/woodtotem"></router-link>
-      <router-link to="/about"></router-link>
-    </nav>
-  </div>
-  <div class="container">
-    <router-view></router-view>
-  </div>
+  <h1>Hello woodtotem {{ $route.params.id }}</h1>
   <main>
-    <!-- <Transition name="rotate-fade">
+    <Transition name="rotate-fade">
       <div class="icon-rotate" v-if="showRotate">
         <IconRotate />
         <p class="cn">旋转手机以全屏观看</p>
@@ -74,9 +74,9 @@
           view in full screen
         </p>
       </div>
-    </Transition> -->
+    </Transition>
 
-    <!-- <Transition name="headphones-fade">
+    <Transition name="headphones-fade">
       <div class="icon-headphones" v-if="showHeadphones">
         <img src="/logo.png" />
         <img src="/headphones.png" />
@@ -113,11 +113,11 @@
       preload="metadata"
       @loadedmetadata="handleMetadata"
       @ended="handleVideoEnded"
-    ></video> -->
+    ></video>
   </main>
 </template>
 
-<!-- <style scoped>
+<style scoped>
 #video {
   position: fixed;
   top: 50%;
@@ -329,4 +329,4 @@
 .modal-fade-leave-to {
   opacity: 0;
 }
-</style> -->
+</style>

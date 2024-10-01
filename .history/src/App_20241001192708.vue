@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { ref, watchEffect } from 'vue'
+import { ref, watchEffect } from 'vue'
 // import IconRotate from '@/assets/rotate.svg'
 // import IconPlay from '@/assets/play.svg'
 // import IconRestart from '@/assets/restart.svg'
