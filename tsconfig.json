@@ -1,17 +1,20 @@
 {
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./types.d.ts", "src/main.ts", "src/pages/**/*.vue"],
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    }
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.json",
   ],
   "compilerOptions": {
     "moduleResolution": "NodeNext",
-    "module": "NodeNext"
-  },
-  "allowJs": true
+    "module": "NodeNext",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+    },
+    "types": [],
+    "resolveJsonModule": true,
+    "allowJs": true
+  }
 }
